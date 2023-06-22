@@ -35,7 +35,7 @@ const opts = {
 }
 var renew = false;
 var mytime;
-const programID = new PublicKey("9abegPWEJVgaJ5kmNiDCfh93iMCovugQY4ToznvXDkWV");
+const programID = new PublicKey("HMPLEhKBG8fAdWAY6mxtkoyrdSuAMzepxd7xPr5PHJz4");
 const CLOCK_PROGRAM_ID = new PublicKey('SysvarC1ock11111111111111111111111111111111');
 function App() {
   const wallet = useWallet()
@@ -109,7 +109,7 @@ function App() {
         const program = new Program(idl, programID, provider);
         const pubKey = await provider.publicKey;
         
-        var [myacc] = await web3.PublicKey.findProgramAddressSync([Buffer.from("solsub"), provider.wallet.publicKey.toBuffer()], programID);
+        var [myacc] = await web3.PublicKey.findProgramAddressSync([Buffer.from("solanadapp_first"), provider.wallet.publicKey.toBuffer()], programID);
         console.log("myaccjj" + myacc);
 
     
